@@ -404,47 +404,83 @@ void Time_START() {
     switch (input) {
       case 1: //과목 추가:
         Sch1.ADD_subject();
-        system("clear");
-        break;
+#ifdef __linux__
+			system("clear");
+#elif _WIN32
+			system("cls");
+#endif // WIN32
+			break;
       case 2: 
         Sch1.Delete_Subject();
-        system("clear");
-        break;
+#ifdef __linux__
+			system("clear");
+#elif _WIN32
+			system("cls");
+#endif // WIN32
+			break;
       case 3:
         Sch1.Select_Subject();
         cin.ignore(100,'\n');
         char ch;
         cin>>ch;
         cin.ignore(100,'\n');
-        system("clear");
-        break;
+#ifdef __linux__
+			system("clear");
+#elif _WIN32
+			system("cls");
+#endif // WIN32
+			break;
       case 4:
         Sch1.Chaing_Subject();
-        system("clear");
-        break;
+#ifdef __linux__
+			system("clear");
+#elif _WIN32
+			system("cls");
+#endif // WIN32
+			break;
       case 5:
         Sch1.ADD_Rul();
-        system("clear");
-        break;
+#ifdef __linux__
+			system("clear");
+#elif _WIN32
+			system("cls");
+#endif // WIN32
+			break;
       case 6:
         Sch1.Delete_Rul();
-        system("clear");
-        break;
+#ifdef __linux__
+			system("clear");
+#elif _WIN32
+			system("cls");
+#endif // WIN32
+			break;
       case 7:
         Sch1.OutFile();
-        system("clear");
-        break;
+#ifdef __linux__
+			system("clear");
+#elif _WIN32
+			system("cls");
+#endif // WIN32
+			break;
       case 8:
          Sch1.InPutFile();
-         system("clear");
-        break;
+#ifdef __linux__
+			system("clear");
+#elif _WIN32
+			system("cls");
+#endif // WIN32
+			break;
       case 9:
         cout<<"프로그램을 종료하겠습니다. 시간표 프로그램을 이용해주셔셔 감사합니다."<<endl;
         exit(1);
       default:
         Sch1.ADD_log("Not Coomand");
-        system("clear");
-        break;
+#ifdef __linux__
+			system("clear");
+#elif _WIN32
+			system("cls");
+#endif // WIN32
+			break;
     }
   }
 }
